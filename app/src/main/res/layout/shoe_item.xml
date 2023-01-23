@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Constraint layout as it is complex layout -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="shoeItem"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/shoeImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@{shoeItem.images[0]}" />
+
+    <TextView
+        android:id="@+id/shoe_title_txt_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:padding="8dp"
+        android:text="@{shoeItem.name}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shoeImage"
+        app:layout_constraintTop_toTopOf="@+id/shoeImage" />
+
+    <TextView
+        android:id="@+id/shoe_size_txt_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:padding="8dp"
+        android:text="@{shoeItem.size}"
+        app:layout_constraintEnd_toEndOf="@+id/shoe_title_txt_view"
+        app:layout_constraintStart_toStartOf="@+id/shoe_title_txt_view"
+        app:layout_constraintTop_toBottomOf="@+id/shoe_title_txt_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
