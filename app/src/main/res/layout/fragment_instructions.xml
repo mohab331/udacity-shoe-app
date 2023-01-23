@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context=".screens.onBoarding.instruction.InstructionsFragment">
+    <data>
+        <variable
+            name="firstInstruction"
+            type="com.udacity.shoestore.models.OnBoardingInstructionModel" />
+        <variable
+            name="secondInstruction"
+            type="com.udacity.shoestore.models.OnBoardingInstructionModel" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding">
+        <TextView
+            android:id="@+id/first_instruction_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{firstInstruction.title}"
+            android:textSize="35sp"
+            android:padding="@dimen/default_padding"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/first_instruction_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{firstInstruction.instructionData}"
+            android:textSize="18sp"
+            android:padding="@dimen/default_padding"
+            android:layout_marginBottom="24dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/second_instruction_title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{secondInstruction.title}"
+            android:textSize="35sp"
+            android:padding="@dimen/default_padding"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/second_instruction_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{secondInstruction.instructionData}"
+            android:textSize="18sp"
+            android:padding="@dimen/default_padding"
+            android:layout_marginBottom="24dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next" />
+        <Button
+            android:id="@+id/previous_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/previous" />
+    </LinearLayout>
+</layout>
