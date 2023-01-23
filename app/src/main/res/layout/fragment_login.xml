@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- using layout in order to enable databinding -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.login.LoginFragment">
+
+    <data>
+        <variable
+            name="user"
+            type="com.udacity.shoestore.models.UserModel" />
+    </data>
+
+   <!-- using scrollview to make the page srollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <!-- using linear layout view group  as it is a type of Layout where you can arrange groups   either Vertically or Horizontally -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding">
+
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_sign_in"
+            android:layout_marginBottom="100dp"
+            android:textSize="35sp"
+            android:textStyle="bold">
+
+    </TextView>
+
+        <EditText
+            android:id="@+id/email_edit_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:hint="@string/prompt_email"
+            android:padding="@dimen/default_padding"
+            android:text="@{user.email}"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/password_edit_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:ems="10"
+            android:maxLength="8"
+            android:inputType="textPassword"
+            android:padding="@dimen/default_padding"
+            android:hint="@string/prompt_password"
+            android:text="@{user.password}"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:text="@string/action_sign_in_short" />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding"
+            android:text="@string/action_register_short" />
+    </LinearLayout>
+    </ScrollView>
+</layout>
