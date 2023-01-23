@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_padding"
+    tools:context=".screens.shoeList.ShoeFragment"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/shoe_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:padding="@dimen/default_padding" />
+
+    <EditText
+        android:id="@+id/shoe_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:hint="Company"
+        android:inputType="textPersonName"
+        android:padding="@dimen/default_padding" />
+
+    <EditText
+        android:id="@+id/shoe_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:ems="10"
+        android:hint="Size"
+        android:inputType="textPersonName"
+        android:padding="@dimen/default_padding" />
+
+    <EditText
+        android:id="@+id/shoe_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="textPersonName"
+        android:padding="@dimen/default_padding" />
+
+    <Button
+        android:id="@+id/add_shoe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save" />
+
+
+</LinearLayout>

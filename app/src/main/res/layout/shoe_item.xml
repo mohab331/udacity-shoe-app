@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Constraint layout as it is complex layout -->
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Constraint layout as it allows you to create large and complex layouts with a flat view hierarchy -->
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
     <data>
@@ -11,17 +12,17 @@
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
+
     <ImageView
         android:id="@+id/shoeImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginStart="@dimen/default_margin"
         android:layout_marginTop="@dimen/default_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@{shoeItem.images[0]}" />
+        app:srcCompat="@drawable/shoes_image" />
 
     <TextView
         android:id="@+id/shoe_title_txt_view"
@@ -32,6 +33,8 @@
         android:layout_marginEnd="@dimen/default_margin"
         android:padding="8dp"
         android:text="@{shoeItem.name}"
+        android:textStyle="bold"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/shoeImage"
         app:layout_constraintTop_toTopOf="@+id/shoeImage" />
@@ -41,6 +44,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
+        android:textSize="18sp"
         android:padding="8dp"
         android:text="@{shoeItem.size}"
         app:layout_constraintEnd_toEndOf="@+id/shoe_title_txt_view"
