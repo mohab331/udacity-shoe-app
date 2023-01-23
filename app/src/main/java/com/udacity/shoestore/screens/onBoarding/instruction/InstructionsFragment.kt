@@ -35,19 +35,15 @@ class InstructionsFragment : Fragment() {
 
 
         nextButton.setOnClickListener{
-
-        }
-
-        previousButton.setOnClickListener {
-                onPreviousButtonPressed()
+                onNextButtonPressed()
         }
 
 
     }
     private fun onNextButtonPressed(){
+        findNavController().navigate(R.id.action_instructionsFragment_to_shoeListFragment)
+
     }
-    private fun onPreviousButtonPressed(){
-        findNavController().navigate(R.id.action_instructionsFragment_to_welcomeFragment)
-    }
+
 
 }
