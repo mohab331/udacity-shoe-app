@@ -28,7 +28,6 @@ class InstructionsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         instructionViewModel = InstructionViewModel()
         val nextButton = binding.nextButton
-        val previousButton = binding.previousButton
 
         binding.firstInstruction = instructionViewModel.instructionsList[0]
         binding.secondInstruction = instructionViewModel.instructionsList[1]
