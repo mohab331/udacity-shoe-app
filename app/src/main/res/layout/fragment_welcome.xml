@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".screens.onBoarding.WelcomeFragment">
 
-    <TextView
+    tools:context=".screens.onBoarding.welcome.WelcomeFragment">
+    <data>
+        <variable
+            name="welcome"
+            type="com.udacity.shoestore.models.OnBoardingWelcomeModel" />
+    </data>
+    <LinearLayout
+
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:gravity="center"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding">
+    <TextView
+        android:id="@+id/welcome_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{welcome.title}"
+        android:textSize="35sp"
+        android:layout_marginBottom="24dp"
+        android:padding="@dimen/default_padding"
+        android:textStyle="bold"/>
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/welcome_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{welcome.welcomeText}"
+            android:textSize="18sp"
+            android:padding="@dimen/default_padding"
+            android:layout_marginBottom="24dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next" />
+    </LinearLayout>
+</layout>
