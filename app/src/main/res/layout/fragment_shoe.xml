@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    >
+    <data>
+        <variable
+            name="shoeViewModel"
+            type="com.udacity.shoestore.screens.shoeList.ShoeViewModel" />
+    </data>
+<!-- using linear layout view group  as it is a type of Layout where you can align all children in a single direction, vertically or horizontally and
+ here we need to arrange views vertically-->
+<LinearLayout
+
     android:padding="@dimen/default_padding"
     tools:context=".screens.shoeList.ShoeFragment"
     android:orientation="vertical">
@@ -14,6 +24,8 @@
         android:layout_marginTop="@dimen/default_margin"
         android:layout_marginBottom="@dimen/default_margin"
         android:hint="Name"
+
+        android:text="@={shoeViewModel.nameField}"
         android:inputType="textPersonName"
         android:padding="@dimen/default_padding" />
 
@@ -23,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/default_margin"
         android:hint="Company"
+        android:text="@={shoeViewModel.companyField}"
         android:inputType="textPersonName"
         android:padding="@dimen/default_padding" />
 
@@ -33,6 +46,7 @@
         android:layout_marginBottom="@dimen/default_margin"
         android:ems="10"
         android:hint="Size"
+        android:text="@={shoeViewModel.sizeField}"
         android:inputType="textPersonName"
         android:padding="@dimen/default_padding" />
 
@@ -42,6 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/default_margin"
         android:ems="10"
+        android:text="@={shoeViewModel.descriptionField}"
         android:hint="Description"
         android:inputType="textPersonName"
         android:padding="@dimen/default_padding" />
@@ -54,3 +69,4 @@
 
 
 </LinearLayout>
+</layout>
