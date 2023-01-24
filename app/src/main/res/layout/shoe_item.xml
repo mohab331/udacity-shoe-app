@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Constraint layout as it allows you to create large and complex layouts with a flat view hierarchy -->
-<layout xmlns:tools="http://schemas.android.com/tools"
+    <!--create large and complex layouts with a flat view hierarchy (no nested view groups). which improves performance
+    and we need to use this here as we need to create complex layout -->
+    <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >

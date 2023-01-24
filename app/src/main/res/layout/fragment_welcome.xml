@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- using layout in order to enable databinding -->
+<!--- using layout then data to enable data binding-->
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
 
@@ -9,7 +9,8 @@
             name="welcome"
             type="com.udacity.shoestore.models.OnBoardingWelcomeModel" />
     </data>
-    <!-- using linear layout view group  as it is a type of Layout where you can arrange groups   either Vertically or Horizontally -->
+    <!-- using linear layout view group  as it is a type of Layout where you can align all children in a single direction, vertically or horizontally and
+     here we need to arrange views vertically-->
     <LinearLayout
 
         android:orientation="vertical"

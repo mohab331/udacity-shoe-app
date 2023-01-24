@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<!-- using layout in order to enable databinding -->
+<!--- using layout then data to enable data binding-->
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".screens.login.LoginFragment">
@@ -12,14 +12,15 @@
             type="com.udacity.shoestore.models.UserModel" />
     </data>
 
-   <!-- using scrollview to make the page srollable -->
+   <!-- using scrollview to make the page scrollable -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-        <!-- using linear layout view group  as it is a type of Layout where you can arrange groups   either Vertically or Horizontally -->
-    <LinearLayout
+        <!-- using linear layout view group  as it is a type of Layout where you can align all children in a single direction, vertically or horizontally and
+         here we need to arrange views vertically-->
+        <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

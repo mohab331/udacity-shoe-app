@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- a layout which provides an additional level of control over touch events between child views, something which many of the components in the Design library take advantage of. -->
+<!-- a layout which provides an additional level of control over touch events between child views,
+ something which many of the components in the Design library take advantage of. and here we need it to add FAB -->
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -21,6 +22,8 @@ tools:context=".screens.shoeList.ShoeListFragment">
         android:layout_height="match_parent"
         android:fillViewport="true">
 
+        <!-- using linear layout view group  as it is a type of Layout where you can align all children in a single direction, vertically or horizontally and
+ here we need to arrange views vertically-->
         <LinearLayout
             android:id="@+id/shoeListLinearLayout"
             android:layout_width="match_parent"
